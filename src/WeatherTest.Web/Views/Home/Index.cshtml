@@ -1,0 +1,26 @@
+﻿@model WeatherTest.Web.Models.WeatherResultVM
+
+<div>
+    @using (Html.BeginForm("GetTemperature", "Home"))
+    {
+        <div>
+            <label>Location: @Html.EditorFor(m => m.Location)</label>
+        </div>
+            <div>
+                <label>
+                    Celsius:@Html.RadioButtonFor(m => m.TemperatureUoM, 0, new { @id = "Celsius" })
+                </label>
+                <label>Fahrenheit: @Html.RadioButtonFor(m => m.TemperatureUoM, 1, new { @id = "Fahrenheit" })</label>
+            </div>
+            <div>
+                <label>Kph: @Html.RadioButtonFor(m => m.WindSpeedUoM, 0)</label>
+                <label>Mph: @Html.RadioButtonFor(m => m.WindSpeedUoM, 0)</label>
+            </div>
+            <input type="submit" />
+    }
+    <hr />
+    <div>
+        <div>@Html.LabelFor(m => m.Temperature): @Html.DisplayTextFor(m => m.Temperature) </div>
+        <div>@Html.LabelFor(m => m.WindSpeed): @Html.DisplayTextFor(m => m.WindSpeed)</div>
+    </div>
+</div>

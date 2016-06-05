@@ -1,0 +1,42 @@
+﻿{
+	"version": "1.0.0-*",
+	"description": "Mock BBCWeather Provider",
+	"summary": "Provides mock weather information for creating the WeatherTest application",
+	"authors": [ "Matt Ridgway" ],
+	"projectUrl": "https://github.com/mattridgway/WeatherTest",
+	"licenseUrl": "https://github.com/mattridgway/WeatherTest/LICENSE",
+	"compilationOptions": {
+		"emitEntryPoint": true
+	},
+
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mattridgway/WeatherTest"
+	},
+
+	"dependencies": {
+		"Microsoft.AspNet.IISPlatformHandler": "1.0.0-rc1-final",
+		"Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-final",
+		"Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
+		"Microsoft.AspNet.Diagnostics": "1.0.0-rc1-final",
+		"Swashbuckle": "6.0.0-rc1-final"
+	},
+
+	"commands": {
+		"web": "Microsoft.AspNet.Server.Kestrel"
+	},
+
+	"frameworks": {
+		"dnx451": { },
+		"dnxcore50": { }
+	},
+
+	"exclude": [
+		"wwwroot",
+		"node_modules"
+	],
+	"publishExclude": [
+		"**.user",
+		"**.vspscc"
+	]
+}
